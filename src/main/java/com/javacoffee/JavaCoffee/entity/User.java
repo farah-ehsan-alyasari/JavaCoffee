@@ -1,24 +1,20 @@
 package com.javacoffee.JavaCoffee.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Collection;
 
-
+@Entity
 @Setter
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
-@Entity
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(nullable = false)
-    private Integer id;
+    private Long id;
 
     private String userName;
 
@@ -33,6 +29,24 @@ public class User {
 
     private String phoneNumber;
 
-    private boolean enabled = true;
+    private String zip;
 
+    //private boolean enabled = true;
+
+    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinTable(name="users_roles", joinColumns = @JoinColumn(name="user_id"),
+                inverseJoinColumns = @JoinColumn(name="role_id"))
+    private Collection<Role> roles;
+
+    //Constructor for everything without Id
+    public User(String userName, String firstName, String lastName,
+                String email, String phoneNumber, String password, String zip){
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+        this.password = password;
+        this.zip = zip;
+    }
 }
