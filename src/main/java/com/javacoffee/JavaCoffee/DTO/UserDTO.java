@@ -12,6 +12,9 @@ import lombok.Setter;
 import javax.persistence.Column;
 import javax.validation.constraints.*;
 
+/**
+ * @author Igor Adulyan
+ */
 @Getter
 @Setter
 @NoArgsConstructor

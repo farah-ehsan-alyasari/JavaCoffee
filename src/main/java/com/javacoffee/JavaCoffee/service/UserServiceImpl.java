@@ -36,6 +36,10 @@ import java.util.stream.Collectors;
  * 2) commented out code is more simple and quick way make things work but there is lack
  * of control
  */
+/**
+ * @author Igor Adulyan
+ */
+
 @Service
 @Slf4j
 public class UserServiceImpl implements UserService {

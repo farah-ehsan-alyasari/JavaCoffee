@@ -3,7 +3,9 @@ package com.javacoffee.JavaCoffee.controller;
 /**
 This controller is mapped to “/sign-up” URI. We use the UserDto to process and validate the user registration form and inject it using the @ModelAttribute("userDto") annotation. When the form is submitted it’s automatically validated and errors are available in the BindingResult. If the form has any errors, we return to the registration page. Otherwise, we redirect and inform the user the registration procedure is complete.
  * */
-
+/**
+ * @author Igor Adulyan
+ */
 import com.javacoffee.JavaCoffee.DTO.UserDTO;
 import com.javacoffee.JavaCoffee.service.UserService;
 import lombok.extern.slf4j.Slf4j;

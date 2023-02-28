@@ -14,6 +14,10 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * @author Igor Adulyan
+ */
+
 public class UserPrincipal implements UserDetails {
 
     private User user;

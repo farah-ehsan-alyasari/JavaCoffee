@@ -7,6 +7,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+/**
+ * @author Igor Adulyan
+ */
 @Setter
 @Getter
 @NoArgsConstructor
