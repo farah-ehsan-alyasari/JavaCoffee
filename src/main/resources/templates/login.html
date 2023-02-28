@@ -1,8 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
-<!-- Header -->
-<head th:replace="/common/components :: common-header"/></head>
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="common-header">
+  <meta charset="UTF-8" />
+  <title>JavaCoffee</title>
+  <link rel="icon" href="https://i.imgur.com/Tqd4IiB.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
 
 <body>
 <!-- Navigation -->
@@ -18,11 +30,11 @@
 </nav>-->
 
 <div class="container d-flex align-items-center justify-content-center pd-10" style="padding-top: 50px;">
-  <form class="form-signin" method="post" action="#" th:action="@{/login}">
+  <form class="form-signin" method="post" action="#" th:action="@{/home}">
     <h2 class="form-signin-heading text-center pb-5">Please sign in</h2>
     <div class="form-group row">
       <div class="col-md-12 col-sm-12">
-      <label for="username" class="sr-only">Username</label>
+      <label for="username" class="sr-only">Email</label>
       <input type="text" id="username"  name="username" class="form-control" placeholder="Username" required="" autofocus="">
       </div>
     </div>

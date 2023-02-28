@@ -13,7 +13,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private Long id;
 
     private String userName;
@@ -24,7 +24,7 @@ public class User {
 
     private String lastName;
 
-    @Column(nullable = false)
+    //@Column(nullable = false)
     private String email;
 
     private String phoneNumber;
@@ -40,7 +40,7 @@ public class User {
 
     //Constructor for everything without Id
     public User(String userName, String firstName, String lastName,
-                String email, String phoneNumber, String password, String zip){
+                String email, String phoneNumber,  String zip, String password){
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;

@@ -4,7 +4,7 @@ package com.javacoffee.JavaCoffee.DTO;
  We use the UserDto to validate the user registration form. This DTO is annotated using Hibernate-Validation annotations which validate trivial fields on empty and our own custom @FieldMatch annotations which validates if the password is equal to the confirm password and the email address field is equal to the confirm email address field.
  **/
 
-import com.javacoffee.JavaCoffee.security.FieldMatch;
+import com.javacoffee.JavaCoffee.validation.FieldMatch;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

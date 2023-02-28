@@ -1,4 +1,4 @@
-package com.javacoffee.JavaCoffee.security;
+package com.javacoffee.JavaCoffee.validation;
 
 /**
  We will use a special @FieldMatch annotation to support the validation process of comparing fields with each other if they match. We can input two fields first and second and an optional message.
