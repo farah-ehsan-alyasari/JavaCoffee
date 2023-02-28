@@ -69,7 +69,7 @@ public class UserController {
     @RequestMapping("/login")
     public String getLoginPage()
     {
-        log.error("Login failed");
+        log.info("Login page displayed");
         return "login";
     }
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<!-- Header -->
+<head th:replace="/common/components :: common-header"/></head>
+
+<body>
+
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar"/>
+</div>
+
+<div class="container">
+  <h2 class="text-center" style="padding-top: 50px; padding-bottom: 50px;">You successfully Signed Up!</h2>
+  <div class="col-md-12 col-sm-12 d-flex justify-content-center pt-2">
+    <label><a th:href="@{/login}">Login here</a></label>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<div th:replace="/common/components :: common-footer"/></div>
+</body>
+</html>
+
+<style type="text/css">
+       form{
+           display: flow;
+           margin: 200px;
+       }
+</style>

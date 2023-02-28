@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<!-- Header -->
+<head th:replace="/common/components :: common-header"/></head>
+
+<body>
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar"/>
+</div>
+
+<!--<nav id="menu">
+  <ul>
+    <li><a th:href="@{/login}">Login</a></li>
+    <li><a th:href="@{/sign-up}">Sign Up</a></li>
+  </ul>
+
+</nav>-->
+
+<div class="container d-flex align-items-center justify-content-center pd-10" style="padding-top: 50px;">
+  <form class="form-signin" method="post" action="#" th:action="@{/login}">
+    <h2 class="form-signin-heading text-center pb-5">Please sign in</h2>
+    <div class="form-group row">
+      <div class="col-md-12 col-sm-12">
+      <label for="username" class="sr-only">Username</label>
+      <input type="text" id="username"  name="username" class="form-control" placeholder="Username" required="" autofocus="">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-12 col-sm-12">
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="">
+      </div>
+    </div>
+    <div class="form-group row">
+
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center pt-2">
+      <button class="btn btn-primary" type="submit">Sign in</button>
+      </div>
+      <div class="col-md-12 col-sm-12 d-flex justify-content-center pt-2">
+        <label>Don't have an account? <a th:href="@{/sign-up}">Sign Up</a> now</label>
+      </div>
+
+    </div>
+  </form>
+</div>
+
+
+<!-- Footer -->
+<div th:replace="/common/components :: common-footer"/></div>
+
+</body>
+</html>
