@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header -->
+<head th:replace="/common/components :: common-header" />
+</head>
+
+<body>
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar" />
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <form class="form-horizontal" th:action="@{/item/add}" method="post" th:object="${item}" enctype="multipart/form-data">
+            <fieldset>
+
+                <legend class="center-block">
+                    New Item Information
+                </legend>
+                <span style="font-size:small">
+                    * is a required field
+                </span>
+
+                <div class="form-group">
+                    <label for="name">
+                        name
+                    </label>
+                    <input type="text" class="form-control" id="name"
+                           required="required" placeholder="name"
+                           th:value="${name}"
+                    />
+                    <span class="help-block">Name of the item</span>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<!-- Footer -->
+<div th:replace="/common/components :: common-footer" />
+</div>
+</body>
+</html>

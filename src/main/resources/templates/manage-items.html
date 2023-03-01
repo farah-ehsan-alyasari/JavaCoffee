@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header -->
+<head th:replace="/common/components :: common-header" />
+</head>
+
+<body>
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar" />
+</div>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row" style="padding-top: 20px">
+        <button class="btn btn-success">
+            <a th:href="@{/add-new-item}" style="color:white; text-decoration=none;" onmouseover="this.style.textDecoration='none';">
+            Add a new Item
+            </a></button>
+    </div>
+</div>
+
+<!-- Footer -->
+<div th:replace="/common/components :: common-footer" />
+</div>
+</body>
+</html>
