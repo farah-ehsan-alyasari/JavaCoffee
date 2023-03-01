@@ -1,7 +1,7 @@
-package com.javacoffee.JavaCoffee.service;
+package com.javacoffee.JavaCoffee.securityPackage.service;
 
-import com.javacoffee.JavaCoffee.DTO.UserDTO;
-import com.javacoffee.JavaCoffee.entity.User;
+import com.javacoffee.JavaCoffee.securityPackage.entity.User;
+import com.javacoffee.JavaCoffee.securityPackage.DTO.UserDTO;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 

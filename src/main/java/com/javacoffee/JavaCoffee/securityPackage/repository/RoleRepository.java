@@ -1,6 +1,6 @@
-package com.javacoffee.JavaCoffee.repository;
+package com.javacoffee.JavaCoffee.securityPackage.repository;
 
-import com.javacoffee.JavaCoffee.entity.Role;
+import com.javacoffee.JavaCoffee.securityPackage.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

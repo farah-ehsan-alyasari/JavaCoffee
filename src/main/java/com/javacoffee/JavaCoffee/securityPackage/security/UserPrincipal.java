@@ -2,10 +2,10 @@
 In this step we add a special class called UserPrincipal (you can give any name). This class implements the UserDetails interface which is a part of Spring Security Core (org.springframework.security.core.userdetails.UserDetails). This implementation gives you more flexibility and control over user authorization and authentication processes. For instance, set a user account disabled/enabled and other.
  * */
 
-package com.javacoffee.JavaCoffee.security;
+package com.javacoffee.JavaCoffee.securityPackage.security;
 
-import com.javacoffee.JavaCoffee.entity.Role;
-import com.javacoffee.JavaCoffee.entity.User;
+import com.javacoffee.JavaCoffee.securityPackage.entity.Role;
+import com.javacoffee.JavaCoffee.securityPackage.entity.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

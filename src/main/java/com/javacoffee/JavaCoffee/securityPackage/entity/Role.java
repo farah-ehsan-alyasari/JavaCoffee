@@ -1,4 +1,4 @@
-package com.javacoffee.JavaCoffee.entity;
+package com.javacoffee.JavaCoffee.securityPackage.entity;
 
 import lombok.*;
 

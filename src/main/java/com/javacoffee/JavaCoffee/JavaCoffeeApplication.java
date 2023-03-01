@@ -1,9 +1,9 @@
 package com.javacoffee.JavaCoffee;
 
-import com.javacoffee.JavaCoffee.entity.Role;
-import com.javacoffee.JavaCoffee.entity.User;
-import com.javacoffee.JavaCoffee.repository.UserRepository;
-import com.javacoffee.JavaCoffee.service.RoleService;
+import com.javacoffee.JavaCoffee.securityPackage.entity.Role;
+import com.javacoffee.JavaCoffee.securityPackage.entity.User;
+import com.javacoffee.JavaCoffee.securityPackage.repository.UserRepository;
+import com.javacoffee.JavaCoffee.securityPackage.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

@@ -1,6 +1,6 @@
-package com.javacoffee.JavaCoffee.repository;
+package com.javacoffee.JavaCoffee.securityPackage.repository;
 
-import com.javacoffee.JavaCoffee.entity.User;
+import com.javacoffee.JavaCoffee.securityPackage.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

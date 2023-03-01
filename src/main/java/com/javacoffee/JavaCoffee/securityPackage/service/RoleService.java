@@ -1,6 +1,6 @@
-package com.javacoffee.JavaCoffee.service;
+package com.javacoffee.JavaCoffee.securityPackage.service;
 
-import com.javacoffee.JavaCoffee.entity.Role;
+import com.javacoffee.JavaCoffee.securityPackage.entity.Role;
 
 import java.util.List;
 

@@ -1,29 +1,27 @@
-package com.javacoffee.JavaCoffee.service;
+package com.javacoffee.JavaCoffee.securityPackage.service;
 
 
-import com.javacoffee.JavaCoffee.DTO.UserDTO;
-import com.javacoffee.JavaCoffee.entity.Role;
-import com.javacoffee.JavaCoffee.entity.User;
-import com.javacoffee.JavaCoffee.repository.UserRepository;
-import com.javacoffee.JavaCoffee.security.UserPrincipal;
+import com.javacoffee.JavaCoffee.securityPackage.entity.Role;
+import com.javacoffee.JavaCoffee.securityPackage.entity.User;
+import com.javacoffee.JavaCoffee.securityPackage.repository.UserRepository;
+import com.javacoffee.JavaCoffee.securityPackage.DTO.UserDTO;
+import com.javacoffee.JavaCoffee.securityPackage.security.UserPrincipal;
+import com.javacoffee.JavaCoffee.securityPackage.service.RoleService;
+import com.javacoffee.JavaCoffee.securityPackage.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.InternalAuthenticationServiceException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.sound.midi.SysexMessage;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
 import java.util.stream.Collectors;
 
 /**

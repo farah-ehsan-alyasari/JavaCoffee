@@ -1,4 +1,4 @@
-package com.javacoffee.JavaCoffee.DTO;
+package com.javacoffee.JavaCoffee.securityPackage.DTO;
 
 /**
  * @author Igor Adulyan

@@ -1,8 +1,9 @@
-package com.javacoffee.JavaCoffee.service;
+package com.javacoffee.JavaCoffee.securityPackage.service;
 
 
-import com.javacoffee.JavaCoffee.entity.Role;
-import com.javacoffee.JavaCoffee.repository.RoleRepository;
+import com.javacoffee.JavaCoffee.securityPackage.entity.Role;
+import com.javacoffee.JavaCoffee.securityPackage.repository.RoleRepository;
+import com.javacoffee.JavaCoffee.securityPackage.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,7 +15,7 @@ import java.util.List;
  */
 
 @Service
-public class RoleServiceImpl implements RoleService{
+public class RoleServiceImpl implements RoleService {
 
     private RoleRepository roleRepository;
 
