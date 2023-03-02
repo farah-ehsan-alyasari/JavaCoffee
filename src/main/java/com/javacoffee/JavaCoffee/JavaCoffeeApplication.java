@@ -32,18 +32,18 @@ public class JavaCoffeeApplication implements CommandLineRunner {
 
 	private void initRoles()
 	{
-		roleService.saveRole(new Role("ROLE_ADMIN"));
-		roleService.saveRole(new Role("ROLE_USER"));
+		//roleService.saveRole(new Role("ROLE_ADMIN"));
+		//roleService.saveRole(new Role("ROLE_USER"));
 		//roleService.saveRole(new Role("ROLE_GUEST"));
 	}
 
 	private void initUsers()
 	{
 
-		/*
+
 		//Login 'admin@admin.com'
 		//Password 'test'
-		userRepository.save(new User("admin", "Admin", "Admin", "admin@admin.com", "998-098-0987",
+		/*userRepository.save(new User("admin", "Admin", "Admin", "admin@admin.com", "998-098-0987",
 				"12345", "$2a$11$DZfZLO720bZby.1QWCu81.gg2BUYCJC7PSsjEUMho.ZaVUVC1h9ZC"));
 
 		User user=  userRepository.findUserByEmail("admin@admin.com");

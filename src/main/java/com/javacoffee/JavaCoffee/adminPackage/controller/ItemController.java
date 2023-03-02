@@ -10,14 +10,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
-@RequestMapping("/item")
 @Slf4j
 public class ItemController {
 
@@ -28,7 +29,7 @@ public class ItemController {
         this.itemDetailService = itemDetailService;
     }
 
-    /*TODO: Confirm with Igor that I do not need this method*/
+    /*TODO: Confirm that I do not need this method*/
     @RequestMapping("/add")
     public String addItem(Model model){
         ItemDTO itemDTO = new ItemDTO();
@@ -45,5 +46,13 @@ public class ItemController {
         }
         itemDetailService.create(itemDTO);
         return "add-new-item";
+    }
+
+    @GetMapping("/manage-items")
+    public String itemList(Model model){
+        List<Item> itemList = itemDetailService.findAll();
+        System.out.println("LIST:" + itemList);
+        model.addAttribute("itemList", itemList);
+        return "manage-items";
     }
 }

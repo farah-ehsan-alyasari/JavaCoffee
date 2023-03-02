@@ -13,6 +13,7 @@ import javax.transaction.Transactional;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.List;
 
 @Service
 public class ItemServiceImpl implements ItemService{
@@ -52,4 +53,8 @@ public class ItemServiceImpl implements ItemService{
 
     }
 
+    @Override
+    public List<Item> findAll() {
+        return itemRepository.findAll();
+    }
 }
