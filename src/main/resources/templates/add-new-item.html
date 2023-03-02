@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <!-- Header -->
 <head th:replace="/common/components :: common-header" />
 </head>
@@ -12,25 +12,100 @@
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <form class="form-horizontal" th:action="@{/item/add}" method="post" th:object="${item}" enctype="multipart/form-data">
+        <form class="form-horizontal" th:action="@{/item/add-item-process}" method="post" th:object="${itemDTO}" enctype="multipart/form-data">
             <fieldset>
 
+                <div style="padding-bottom: 20px; padding-top:20px;">
                 <legend class="center-block">
                     New Item Information
                 </legend>
-                <span style="font-size:small">
+                <span style="font-size:small;">
                     * is a required field
                 </span>
+                </div>
 
+                <!-- name -->
                 <div class="form-group">
-                    <label for="name">
-                        name
-                    </label>
-                    <input type="text" class="form-control" id="name"
-                           required="required" placeholder="name"
+                    <input type="text" class="form-control" id="name" name="name"
+                           required="required" placeholder="*Name"
                            th:value="${name}"
                     />
-                    <span class="help-block">Name of the item</span>
+                </div>
+
+                <!-- category -->
+                <div class="form-group">
+                    <select required="required" id="category", class="form-control" th:value="${category}" name="category">
+                        <option value="" hidden >*Category</option>
+                        <option value="CoffeeDrinks">Coffee Drinks</option>
+                        <option value="TeaDrinks">Tea Drinks</option>
+                        <option value="FoodItems">Food Items</option>
+                        <option value="Merchandise">Merchandise</option>
+                    </select>
+                </div>
+
+                <!-- description -->
+                <!--<div class="form-group">
+                    <input type="textarea" class="form-control" id="description" name="description"
+                           required="required" placeholder="*Description"
+                           th:value="${description}"
+                    />
+                </div>-->
+
+                <!-- description -->
+                <div class="form-group">
+                    <textarea id="description" name="description" rows="3"
+                              class="form-control"
+                           required="required" placeholder="*Description"
+                           th:value="${description}"
+                    ></textarea>
+                </div>
+
+                <!-- listPrice -->
+                <div class="form-group">
+                    <input type="number" class="form-control" id="listPrice" name="listPrice"
+                           placeholder="*List Price" required="required"
+                           th:value="${listPrice}"
+                    />
+                </div>
+
+                <!-- ourPrice -->
+                <div class="form-group">
+                    <input type="number" class="form-control" id="ourPrice" name="ourPrice"
+                           placeholder="*Our Price" required="required"
+                           th:value="${ourPrice}"
+                    />
+                </div>
+
+                <!-- inStockNumber -->
+                <div class="form-group">
+                    <input type="number" class="form-control" id="inStockNumber" name="inStockNumber"
+                           required="required" placeholder="*Amount in stock"
+                           th:value="${inStockNumber}"
+                    />
+                </div>
+
+                <!-- Status of Item -->
+                <div class="form-group" style="display: inline-block;">
+                    <label class="control-label" for="status" style="display: inline-block;">Status</label>
+                    <div id="status" style="display: inline-block; margin-left: 10px;">
+                        <label><input type="radio" name="status" value="true">Active</label>
+                        <label><input type="radio" name="status" value="false">Inactive</label>
+                    </div>
+                </div>
+
+                <!-- itemImage -->
+                <div class="form-group">
+                    <div><lablel>Upload Item Image</lablel></div>
+                    <div><input
+                        id="itemImage" type="file" name="itemImage"
+                        th:value="${itemImage}"
+                    /></div>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form-group" style="padding-top:20px">
+                    <button type="submit" class="btn btn-success">Add Item</button>
+                    <a class="btn btn-danger" th:href="@{/add-new-item}">Cancel</a>
                 </div>
 
             </fieldset>

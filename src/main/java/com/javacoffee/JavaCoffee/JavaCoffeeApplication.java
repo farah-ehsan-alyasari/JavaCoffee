@@ -39,6 +39,8 @@ public class JavaCoffeeApplication implements CommandLineRunner {
 
 	private void initUsers()
 	{
+
+		/*
 		//Login 'admin@admin.com'
 		//Password 'test'
 		userRepository.save(new User("admin", "Admin", "Admin", "admin@admin.com", "998-098-0987",
@@ -48,8 +50,7 @@ public class JavaCoffeeApplication implements CommandLineRunner {
 		user.setRoles(Arrays.asList(roleService.findRoleByRoleName("ROLE_ADMIN")));
 
 		userRepository.save(user);
-
-
+		*/
 	}
 
 
