@@ -51,7 +51,7 @@ public class ItemController {
     @GetMapping("/manage-items")
     public String itemList(Model model){
         List<Item> itemList = itemDetailService.findAll();
-        System.out.println("LIST:" + itemList);
+        //System.out.println("LIST:" + itemList);
         model.addAttribute("itemList", itemList);
         return "manage-items";
     }
