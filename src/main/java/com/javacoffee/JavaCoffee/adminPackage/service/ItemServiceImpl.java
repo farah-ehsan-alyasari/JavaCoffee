@@ -14,6 +14,7 @@ import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ItemServiceImpl implements ItemService{
@@ -57,4 +58,20 @@ public class ItemServiceImpl implements ItemService{
     public List<Item> findAll() {
         return itemRepository.findAll();
     }
+
+
+    /*In this implementation, the findById() method of the itemRepository returns an Optional<Item> object,
+    which may or may not contain an Item entity. We check if the itemOptional contains an Item by calling isPresent().
+    If it does, we get the Item from the itemOptional using get() and return it. If it doesn't,
+    we throw a RuntimeException with a message indicating that the item was not found.*/
+    @Override
+    public Item findOne(Long id) {
+        Optional<Item> itemOptional = itemRepository.findById(id);
+        if (itemOptional.isPresent()) {
+            return itemOptional.get();
+        } else {
+            throw new RuntimeException("Item not found with id " + id);
+        }
+    }
+
 }

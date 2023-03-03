@@ -1,10 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header -->
+<head th:replace="/common/components :: common-header"/></head>
 
+<body>
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar"/>
+</div>
+
+<div class="d-flex align-items-center justify-content-center vh-100" style="padding-left=40px;">
+    <form th:action="@{/item-details/{id}(id=${item.id})}" method="post">
+        <input hidden="hidden" name="id" th:field="*{item.id}" />
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <a class="btn btn-outline-primary mb-3" th:href="@{/order-online}">Back to Item List</a>
+                <img class="img-fluid rounded" th:src="@{/images/items/}+${item.id}+'.png'" />
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-center">
+                <h3 th:text="${item.name}" class="align-self-start"></h3>
+                <div class="row align-items-start">
+                    <div class="col-md-5">
+                        <h5><strong>Category: </strong><span th:text="${item.category}"></span></h5>
+                        <h5><strong>Description: </strong><span th:text="${item.description}"></span></h5>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card border-secondary mb-3" style="max-width: 18rem;">
+                            <div class="card-header">Price</div>
+                            <div class="card-body text-secondary">
+                                <h5 class="card-title">Our Price: <span>$ <span th:text="${item.ourPrice}"></span></span></h5>
+                                <p class="card-text">List Price: <span style="text-decoration:line-through">$ <span th:text="${item.listPrice}"></span></span></p>
+                                <p class="card-text">You save: $ <span th:text="${#numbers.formatDecimal((item.listPrice - item.ourPrice), 0, 'COMMA', 2, 'POINT')}"></span></p>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="qty">Qty:</label>
+                                            <select class="form-control" name="qty" id="qty">
+                                                <option th:each="qty : ${qtyList}" th:value="${qty}" th:text="${qty}">
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="size">Size:</label>
+                                            <select class="form-control" name="size" id="size">
+                                                <option th:each="size : ${sizeList}" th:value="${size}" th:text="${size}">
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h4 th:if="*{item.inStockNumber&gt;10}" style="color:green;">In Stock</h4>
+                                <h4 th:if="*{item.inStockNumber&lt;10}" style="color:green;">Only <span th:text="${itemDTO.inStockNumber}"></span> In Stock</h4>
+                                <h4 th:if="*{item.inStockNumber==0}" style="color:red">Unavailable</h4>
+                                <button type="submit" class="btn btn-success">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!-- Footer -->
+<div th:replace="/common/components :: common-footer"></div>
 </body>
 </html>

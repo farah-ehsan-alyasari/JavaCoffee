@@ -9,4 +9,7 @@ public interface ItemService {
     void create(ItemDTO itemDTO);
 
     List<Item> findAll();
+
+    Item findOne(Long id);
+
 }
