@@ -6,6 +6,7 @@ import com.javacoffee.JavaCoffee.adminPackage.service.ItemService;
 import com.javacoffee.JavaCoffee.securityPackage.DTO.UserDTO;
 import com.javacoffee.JavaCoffee.securityPackage.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,12 +31,12 @@ public class ItemController {
     }
 
     /*TODO: Confirm that I do not need this method*/
-    @RequestMapping("/add")
+    /*@RequestMapping("/add")
     public String addItem(Model model){
         ItemDTO itemDTO = new ItemDTO();
         model.addAttribute("item", itemDTO);
         return "addItem";
-    }
+    }*/
 
     @PostMapping("/add-item-process")
     public String addItemProcess(@Valid @ModelAttribute("itemDTO") ItemDTO itemDTO, BindingResult bindingResult){
