@@ -12,7 +12,7 @@
 <!-- Main Content -->
 <div class="container">
     <div class="row">
-        <form class="form-horizontal" th:action="@{/update-item}" method="post" th:object="${item}" enctype="multipart/form-data">
+        <form class="form-horizontal" th:action="@{/update-item/?id=}+${item.id}" method="post" th:object="${item}" enctype="multipart/form-data">
             <fieldset>
 
                 <div style="padding-bottom: 20px; padding-top:20px;">
@@ -30,10 +30,10 @@
                      it will update the item with this same id,
                      rather than creating a new item
                      with a new id and same information -->
-                <div>
+                <!--<div>
                 <label for="id"></label>
                 <input hidden="hidden" name="id" th:value="${id}" placeholder="id" id="id"/>
-                </div>
+                </div>-->
 
                 <!-- name -->
                 <div class="form-group">

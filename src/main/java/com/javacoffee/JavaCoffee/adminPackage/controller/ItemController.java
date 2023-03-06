@@ -62,7 +62,8 @@ public class ItemController {
     }
 
     @PostMapping("/update-item")
-    public String updateBookPost(@ModelAttribute("item") ItemDTO itemDTO, HttpServletRequest request){
+    public String updateBookPost(@RequestParam("id") Long id, @ModelAttribute("item") ItemDTO itemDTO, HttpServletRequest request){
+        itemDTO.setId(id);
         itemDetailService.update(itemDTO);
 
         return "update-item";
