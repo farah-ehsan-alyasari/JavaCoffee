@@ -54,7 +54,7 @@ public class ItemController {
     }
 
     @RequestMapping("/update-item")
-    public String updateBookGet(@RequestParam("id") Long id, Model model){
+    public String updateItemGet(@RequestParam("id") Long id, Model model){
         Item item = itemDetailService.findOne(id);
         model.addAttribute("item", item);
 
@@ -62,10 +62,18 @@ public class ItemController {
     }
 
     @PostMapping("/update-item")
-    public String updateBookPost(@RequestParam("id") Long id, @ModelAttribute("item") ItemDTO itemDTO, HttpServletRequest request){
+    public String updateItemPost(@RequestParam("id") Long id, @ModelAttribute("item") ItemDTO itemDTO, HttpServletRequest request){
         itemDTO.setId(id);
         itemDetailService.update(itemDTO);
 
         return "update-item";
+    }
+
+    @RequestMapping("/delete-item")
+    public String deleteItem(@RequestParam("id") Long id){
+        Item item = itemDetailService.findOne(id);
+        itemDetailService.delete(item);
+
+        return "redirect:/manage-items";
     }
 }

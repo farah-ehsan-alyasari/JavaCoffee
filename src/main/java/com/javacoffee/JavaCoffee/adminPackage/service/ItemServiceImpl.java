@@ -109,4 +109,10 @@ public class ItemServiceImpl implements ItemService{
             }
         }
     }
+
+    @Transactional
+    @Override
+    public void delete(Item item) {
+        itemRepository.delete(item);
+    }
 }

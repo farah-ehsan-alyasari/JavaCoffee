@@ -13,4 +13,6 @@ public interface ItemService {
     Item findOne(Long id);
 
     void update(ItemDTO itemDTO);
+
+    void delete(Item item);
 }

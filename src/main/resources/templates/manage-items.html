@@ -6,7 +6,7 @@
 
 <body>
 <!-- Navigation -->
-<div th:replace="/common/components :: common-navbar" />
+<div th:replace="/common/components :: common-navbar" >
 </div>
 
 <!-- Main Content -->
@@ -41,7 +41,7 @@
                         <td th:text="${item.ourPrice}"></td>
                         <td th:text="${item.active}"></td>
                         <td><a th:href="@{/update-item/?id=}+${item.id}">Edit</a></td>
-                        <td>Delete</td>
+                        <td><a th:href="@{/delete-item/?id=}+${item.id}">Delete</a></td>
 
                     </tr>
                 </tbody>
@@ -55,5 +55,11 @@
 <!-- Footer -->
 <div th:replace="/common/components :: common-footer" >
 </div>
+<script>
+    $(document).ready(function() {
+        $("#itemListTable").DataTable();
+    });
+</script>
 </body>
 </html>
+
