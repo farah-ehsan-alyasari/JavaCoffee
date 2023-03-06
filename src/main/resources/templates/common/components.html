@@ -41,6 +41,9 @@
         <li class="nav-item" sec:authorize="isAuthenticated() and hasRole('ROLE_USER')">
           <a class="nav-link" href="#">Shopping Cart</a>
         </li>
+        <!--<li class="nav-item" sec:authorize="isAuthenticated() and hasRole('ROLE_USER')">
+          <a class="nav-link" th:href="@{/my-account}">My Account</a>-->
+        </li>
         <li class="nav-item" sec:authorize="isAnonymous()">
           <a class="nav-link" th:href="@{/sign-up}">Sign Up</a>
         </li>
