@@ -24,22 +24,25 @@
                 <tr>
                     <th>Name</th>
                     <th>Category</th>
+                    <th>Description</th>
                     <th>List Price</th>
                     <th>Discounted Price</th>
                     <th>Active Status</th>
-                    <th>Delete</th>
                     <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                     <tr th:each="item : ${itemList}">
                         <td th:text="${item.name}"></td>
                         <td th:text="${item.category}"></td>
+                        <td th:text="${#strings.abbreviate(item.description, 500)}"></td>
                         <td th:text="${item.listPrice}"></td>
                         <td th:text="${item.ourPrice}"></td>
                         <td th:text="${item.active}"></td>
+                        <td><a th:href="@{/update-item/?id=}+${item.id}">Edit</a></td>
                         <td>Delete</td>
-                        <td>Edit</td>
+
                     </tr>
                 </tbody>
             </table>

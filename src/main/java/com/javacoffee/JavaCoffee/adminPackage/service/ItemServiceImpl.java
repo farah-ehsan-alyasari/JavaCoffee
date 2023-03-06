@@ -13,6 +13,8 @@ import javax.transaction.Transactional;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Optional;
 
@@ -74,4 +76,37 @@ public class ItemServiceImpl implements ItemService{
         }
     }
 
+    @Transactional
+    @Override
+    public void update(ItemDTO itemDTO) {
+
+        /*the ModelMapper class is used to map data between different Java classes,
+        and in the code snippet provided, it is used to map data from a ItemDTO object to a new Item object,
+        with a strict matching strategy for property mapping.*/
+            ModelMapper modelMapper = new ModelMapper();
+            modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
+            Item item = modelMapper.map(itemDTO, Item.class);
+
+            itemRepository.save(item);
+
+        MultipartFile itemImage = item.getItemImage();
+
+        /*Update the image if needs to be updated*/
+        if(!itemImage.isEmpty()){
+            try{
+                byte[] bytes = itemImage.getBytes();
+                String str = item.getId() + ".png";
+
+                /*Delete the old image that belonged to this item*/
+                Files.delete(Paths.get("src/main/resources/static/images/items/"+str));
+
+                BufferedOutputStream stream = new BufferedOutputStream(
+                        new FileOutputStream(new File("src/main/resources/static/images/items/"+str)));
+                stream.write(bytes);
+                stream.close();
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
 }

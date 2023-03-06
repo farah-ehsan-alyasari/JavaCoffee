@@ -3,19 +3,15 @@ package com.javacoffee.JavaCoffee.adminPackage.controller;
 import com.javacoffee.JavaCoffee.adminPackage.DTO.ItemDTO;
 import com.javacoffee.JavaCoffee.adminPackage.entity.Item;
 import com.javacoffee.JavaCoffee.adminPackage.service.ItemService;
-import com.javacoffee.JavaCoffee.securityPackage.DTO.UserDTO;
-import com.javacoffee.JavaCoffee.securityPackage.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.List;
 
@@ -55,5 +51,20 @@ public class ItemController {
         //System.out.println("LIST:" + itemList);
         model.addAttribute("itemList", itemList);
         return "manage-items";
+    }
+
+    @RequestMapping("/update-item")
+    public String updateBookGet(@RequestParam("id") Long id, Model model){
+        Item item = itemDetailService.findOne(id);
+        model.addAttribute("item", item);
+
+        return "update-item";
+    }
+
+    @PostMapping("/update-item")
+    public String updateBookPost(@ModelAttribute("item") ItemDTO itemDTO, HttpServletRequest request){
+        itemDetailService.update(itemDTO);
+
+        return "update-item";
     }
 }
