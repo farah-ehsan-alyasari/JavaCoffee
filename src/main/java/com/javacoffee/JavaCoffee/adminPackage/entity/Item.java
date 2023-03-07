@@ -1,12 +1,14 @@
 package com.javacoffee.JavaCoffee.adminPackage.entity;
 
-import lombok.AllArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.javacoffee.JavaCoffee.shoppingCartPackage.entity.ItemToCartItem;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Setter
@@ -42,5 +44,11 @@ public class Item {
      another option, would be to store the image as a blob of binary*/
     @Transient
     private MultipartFile itemImage;
+
+    //TODO: For ShoppingCart
+    //Connect it to ItemToCartItem
+    //@OneToMany(mappedBy = "item")
+    //@JsonIgnore
+    //private List<ItemToCartItem> itemToCartItemList;
 
 }
