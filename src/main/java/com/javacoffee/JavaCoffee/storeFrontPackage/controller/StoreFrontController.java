@@ -45,5 +45,9 @@ public class StoreFrontController {
         return "item-details";
     }
 
+    @RequestMapping ("/apply-here")
+    public String showApplyHerePage(){
+        return "apply-here";
+    }
 
 }
