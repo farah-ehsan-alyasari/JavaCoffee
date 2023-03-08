@@ -52,7 +52,7 @@ public class Item {
     //private List<ItemToCartItem> itemToCartItemList;
 
     //For Shopping Cart
-    @Transient
-    private int quantityToAdd;
+    //@Transient
+    //private int quantityToAdd;
 
 }

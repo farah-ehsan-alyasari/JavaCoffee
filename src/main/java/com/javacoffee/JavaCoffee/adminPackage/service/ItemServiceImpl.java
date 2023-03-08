@@ -47,7 +47,7 @@ public class ItemServiceImpl implements ItemService{
             byte[] bytes = itemImage.getBytes();
             String str = item.getId() + ".png";
             BufferedOutputStream stream = new BufferedOutputStream(
-                    new FileOutputStream(new File("src/main/resources/static/images/cartItems/"+str)));
+                    new FileOutputStream(new File("src/main/resources/static/images/items/"+str)));
             stream.write(bytes);
             stream.close();
         }catch(Exception e){
@@ -98,10 +98,10 @@ public class ItemServiceImpl implements ItemService{
                 String str = item.getId() + ".png";
 
                 /*Delete the old image that belonged to this item*/
-                Files.delete(Paths.get("src/main/resources/static/images/cartItems/"+str));
+                Files.delete(Paths.get("src/main/resources/static/images/items/"+str));
 
                 BufferedOutputStream stream = new BufferedOutputStream(
-                        new FileOutputStream(new File("src/main/resources/static/images/cartItems/"+str)));
+                        new FileOutputStream(new File("src/main/resources/static/images/items/"+str)));
                 stream.write(bytes);
                 stream.close();
             }catch(Exception e){

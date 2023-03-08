@@ -44,12 +44,12 @@ public class ItemController {
         return "add-new-item";
     }
 
-    @GetMapping("/manage-cartItems")
+    @GetMapping("/manage-items")
     public String itemList(Model model){
         List<Item> itemList = itemDetailService.findAll();
         //System.out.println("LIST:" + itemList);
         model.addAttribute("itemList", itemList);
-        return "manage-cartItems";
+        return "manage-items";
     }
 
     @RequestMapping("/update-item")
@@ -73,6 +73,6 @@ public class ItemController {
         Item item = itemDetailService.findOne(id);
         itemDetailService.delete(item);
 
-        return "redirect:/manage-cartItems";
+        return "redirect:/manage-items";
     }
 }

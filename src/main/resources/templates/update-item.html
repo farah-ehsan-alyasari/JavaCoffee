@@ -38,14 +38,14 @@
                 <!-- name -->
                 <div class="form-group">
                     <input type="text" class="form-control" id="name" name="name"
-                            placeholder="*Name"
+                            placeholder="*Name" required
                            th:value="${name}"
                     />
                 </div>
 
                 <!-- category -->
                 <div class="form-group">
-                    <select  id="category", class="form-control" th:value="${category}" name="category">
+                    <select  id="category", class="form-control" th:value="${category}" name="category" required>
                         <option value="" hidden >*Category</option>
                         <option value="Category_1">Category 1</option>
                         <option value="Category_2">Category 2</option>
@@ -66,7 +66,7 @@
                 <div class="form-group">
                     <textarea id="description" name="description" rows="3"
                               class="form-control"
-                               placeholder="*Description"
+                               placeholder="*Description" required
                               th:value="${description}"
                     ></textarea>
                 </div>
@@ -74,7 +74,7 @@
                 <!-- listPrice -->
                 <div class="form-group">
                     <input type="number" class="form-control" id="listPrice" name="listPrice"
-                           placeholder="*List Price"
+                           placeholder="*List Price" required
                            th:value="${listPrice}"
                     />
                 </div>
@@ -82,7 +82,7 @@
                 <!-- ourPrice -->
                 <div class="form-group">
                     <input type="number" class="form-control" id="ourPrice" name="ourPrice"
-                           placeholder="*Our Price"
+                           placeholder="*Our Price" required
                            th:value="${ourPrice}"
                     />
                 </div>
@@ -90,7 +90,7 @@
                 <!-- inStockNumber -->
                 <div class="form-group">
                     <input type="number" class="form-control" id="inStockNumber" name="inStockNumber"
-                            placeholder="*Amount in stock"
+                            placeholder="*Amount in stock" required
                            th:value="${inStockNumber}"
                     />
                 </div>
