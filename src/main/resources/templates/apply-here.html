@@ -12,12 +12,15 @@
 <div class="container pt-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">
+            <div th:if="${message}" class="alert alert-success" role="alert">
+                <span th:text="${message}"></span>
+            </div>
             <h2>Hello,</h2>
             <p>Thank you for your interest in working for us. There are no current openings right now for any job. Please send your resume in PDF format, and we will consider you for future opportunities as they arise. We appreciate your interest!</p>
             <form action="#" th:action="@{/upload-process}" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <label for="fileUpload">Resume in PDF format:</label>
-                    <input type="file" class="form-control-file" name="file" accept=".pdf" id="fileUpload">
+                    <label for="upload">Resume in PDF format:</label>
+                    <input type="file" class="form-control-file" name="file" accept=".pdf" id="upload">
                 </div>
                 <br>
                 <br>
