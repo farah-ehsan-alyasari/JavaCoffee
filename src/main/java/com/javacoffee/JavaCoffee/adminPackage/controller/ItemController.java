@@ -4,7 +4,6 @@ import com.javacoffee.JavaCoffee.adminPackage.DTO.ItemDTO;
 import com.javacoffee.JavaCoffee.adminPackage.entity.Item;
 import com.javacoffee.JavaCoffee.adminPackage.service.ItemService;
 import lombok.extern.slf4j.Slf4j;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,12 +44,12 @@ public class ItemController {
         return "add-new-item";
     }
 
-    @GetMapping("/manage-items")
+    @GetMapping("/manage-cartItems")
     public String itemList(Model model){
         List<Item> itemList = itemDetailService.findAll();
         //System.out.println("LIST:" + itemList);
         model.addAttribute("itemList", itemList);
-        return "manage-items";
+        return "manage-cartItems";
     }
 
     @RequestMapping("/update-item")
@@ -74,6 +73,6 @@ public class ItemController {
         Item item = itemDetailService.findOne(id);
         itemDetailService.delete(item);
 
-        return "redirect:/manage-items";
+        return "redirect:/manage-cartItems";
     }
 }

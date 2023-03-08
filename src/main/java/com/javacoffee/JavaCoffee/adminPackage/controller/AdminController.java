@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class AdminController {
 
-    @RequestMapping("/manage-items")
+    @RequestMapping("/manage-cartItems")
     public String manageItems(){
-        return "manage-items";
+        return "manage-cartItems";
     }
 
     @RequestMapping("/add-new-item")

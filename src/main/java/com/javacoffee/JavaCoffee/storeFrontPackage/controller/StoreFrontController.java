@@ -39,15 +39,17 @@ public class StoreFrontController {
 
         // Add a list of available quantities and sizes to the Thymeleaf model
         model.addAttribute("qtyList", Arrays.asList(1, 2, 3, 4, 5));
-        model.addAttribute("sizeList", Arrays.asList("Small", "Medium", "Large"));
+        //model.addAttribute("sizeList", Arrays.asList("Small", "Medium", "Large"));
 
         // Render the item-details template
         return "item-details";
     }
 
-    @RequestMapping ("/apply-here")
-    public String showApplyHerePage(){
-        return "apply-here";
+    @RequestMapping("/shopping-cart")
+    public String showShoppingCart(){
+        return "shopping-cart";
     }
+
+
 
 }

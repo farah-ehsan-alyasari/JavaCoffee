@@ -51,4 +51,8 @@ public class Item {
     //@JsonIgnore
     //private List<ItemToCartItem> itemToCartItemList;
 
+    //For Shopping Cart
+    @Transient
+    private int quantityToAdd;
+
 }

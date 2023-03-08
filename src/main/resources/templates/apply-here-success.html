@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header -->
+<head th:replace="/common/components :: common-header"/></head>
+
+<body>
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar"/>
+</div>
+
+<!-- Main Content-->
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2>Awesome!</h2>
+      <p>Your application was sent successfully!</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+  <div th:replace="/common/components :: common-footer"></div>
+</div>
+</body>
+</html>
+
+<style>
+  .footer{
+    padding-top: 300px;
+  }
+</style>

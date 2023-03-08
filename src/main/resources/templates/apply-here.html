@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- Header -->
+<head th:replace="/common/components :: common-header"/></head>
+
 <body>
-<h1>test</h1>
+<!-- Navigation -->
+<div th:replace="/common/components :: common-navbar"/>
+</div>
+
+<!-- Main Content-->
+<div class="container pt-5">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h2>Hello,</h2>
+            <p>Thank you for your interest in working for us. There are no current openings right now for any job. Please send your resume in PDF format, and we will consider you for future opportunities as they arise. We appreciate your interest!</p>
+            <form action="#" th:action="@{/upload-process}" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="fileUpload">Resume in PDF format:</label>
+                    <input type="file" class="form-control-file" name="file" accept=".pdf" id="fileUpload">
+                </div>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-primary" name="submitButton">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+    <div th:replace="/common/components :: common-footer"></div>
+</div>
 </body>
 </html>
+
+<style>
+    .footer{
+        padding-top:30px;
+    }
+</style>
