@@ -1,8 +1,8 @@
 package com.javacoffee.JavaCoffee.adminPackage.controller;
 
 import com.javacoffee.JavaCoffee.adminPackage.entity.Job;
+import com.javacoffee.JavaCoffee.adminPackage.service.JobService;
 import com.javacoffee.JavaCoffee.adminPackage.service.UploadService;
-import com.javacoffee.JavaCoffee.adminPackage.service.UploadServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +26,9 @@ public class JobController {
     @Autowired
     UploadService uploadService;
 
+    @Autowired
+    JobService jobService;
+
     @RequestMapping("/apply-here")
     public String showApplyHerePage(Model model)
     {
@@ -41,6 +44,12 @@ public class JobController {
             attributes.addFlashAttribute("message", "Please select a file to upload.");
             return "redirect:/apply-here";
         }
+
+        // Save the job object to the database
+        String fullName = job.getFullName();
+        job.setUploadedFile(file.getOriginalFilename());
+        job.setFullName(fullName);
+        jobService.saveJob(job);
 
         model.addAttribute(file);
         // normalize the file path

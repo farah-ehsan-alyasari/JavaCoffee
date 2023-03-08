@@ -19,6 +19,10 @@
             <p>Thank you for your interest in working for us. There are no current openings right now for any job. Please send your resume in PDF format, and we will consider you for future opportunities as they arise. We appreciate your interest!</p>
             <form action="#" th:action="@{/upload-process}" method="post" enctype="multipart/form-data">
                 <div class="form-group">
+                    <label for="fullName">Full Name:</label>
+                    <input type="text" class="form-control" name="fullName" id="fullName" required>
+                </div>
+                <div class="form-group">
                     <label for="upload">Resume in PDF format:</label>
                     <input type="file" class="form-control-file" name="file" accept=".pdf" id="upload">
                 </div>
