@@ -1,0 +1,3 @@
+2023-03-08 13:54:49.340 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 15836 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-08 13:54:49.340 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-08 13:54:52.042 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 2.785 seconds (JVM running for 8369.305)

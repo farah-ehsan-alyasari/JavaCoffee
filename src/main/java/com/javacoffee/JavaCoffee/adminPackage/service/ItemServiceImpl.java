@@ -2,7 +2,9 @@ package com.javacoffee.JavaCoffee.adminPackage.service;
 
 import com.javacoffee.JavaCoffee.adminPackage.DTO.ItemDTO;
 import com.javacoffee.JavaCoffee.adminPackage.entity.Item;
+import com.javacoffee.JavaCoffee.adminPackage.exception.ItemNotFoundException;
 import com.javacoffee.JavaCoffee.adminPackage.repository.ItemRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@Slf4j
 public class ItemServiceImpl implements ItemService{
 
     @Autowired
@@ -37,6 +40,7 @@ public class ItemServiceImpl implements ItemService{
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
         Item item = modelMapper.map(itemDTO, Item.class);
 
+        log.info("new item was created");
         itemRepository.save(item);
 
         /*Save the image locally.
@@ -72,7 +76,7 @@ public class ItemServiceImpl implements ItemService{
         if (itemOptional.isPresent()) {
             return itemOptional.get();
         } else {
-            throw new RuntimeException("Item not found with id " + id);
+            throw new ItemNotFoundException(id);
         }
     }
 
@@ -108,6 +112,8 @@ public class ItemServiceImpl implements ItemService{
                 e.printStackTrace();
             }
         }
+
+        log.info("an item was updated with id: " + item.getId());
     }
 
     @Transactional
