@@ -1,3 +1,71 @@
-2023-03-08 13:54:49.340 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 15836 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
-2023-03-08 13:54:49.340 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
-2023-03-08 13:54:52.042 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 2.785 seconds (JVM running for 8369.305)
+2023-03-09 09:06:55.832 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 30404 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:06:55.874 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:07:28.006 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 35.562 seconds (JVM running for 45.536)
+2023-03-09 09:07:50.196 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 09:07:58.312 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 09:16:20.929 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 30404 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:16:20.932 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:16:24.912 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 4.166 seconds (JVM running for 582.442)
+2023-03-09 09:17:07.120 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 10732 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:17:07.126 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:17:11.159 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 10732 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:17:11.159 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:17:37.868 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 30404 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:17:37.869 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:17:41.766 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 4.093 seconds (JVM running for 659.296)
+2023-03-09 09:18:08.577 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 30404 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:18:08.578 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:18:11.173 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 2.676 seconds (JVM running for 688.703)
+2023-03-09 09:18:50.805 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 33048 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:18:50.810 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:18:55.207 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 33048 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:18:55.208 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:19:26.216 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 30404 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:19:26.217 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:19:28.289 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 2.188 seconds (JVM running for 765.819)
+2023-03-09 09:37:47.104 INFO  c.j.JavaCoffee.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 17436 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:37:47.110 INFO  c.j.JavaCoffee.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:37:50.120 INFO  c.j.JavaCoffee.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 17436 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:37:50.121 INFO  c.j.JavaCoffee.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:40:41.404 INFO  c.j.JavaCoffee.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 12724 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:40:41.414 INFO  c.j.JavaCoffee.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:41:01.862 INFO  c.j.JavaCoffee.ItemServiceImplTest - Started ItemServiceImplTest in 22.513 seconds (JVM running for 27.51)
+2023-03-09 09:45:25.041 INFO  c.j.JavaCoffee.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 6260 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:45:25.046 INFO  c.j.JavaCoffee.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:45:46.631 INFO  c.j.JavaCoffee.ItemServiceImplTest - Started ItemServiceImplTest in 23.498 seconds (JVM running for 28.041)
+2023-03-09 09:48:06.258 INFO  c.j.JavaCoffee.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 5320 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:48:06.262 INFO  c.j.JavaCoffee.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:48:25.919 INFO  c.j.JavaCoffee.ItemServiceImplTest - Started ItemServiceImplTest in 21.335 seconds (JVM running for 25.624)
+2023-03-09 09:54:04.342 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 19208 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:54:04.346 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:54:25.091 INFO  c.j.J.a.ItemServiceImplTest - Started ItemServiceImplTest in 22.517 seconds (JVM running for 26.271)
+2023-03-09 09:56:35.079 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 4688 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 09:56:35.084 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 09:56:56.576 INFO  c.j.J.a.ItemServiceImplTest - Started ItemServiceImplTest in 23.675 seconds (JVM running for 28.106)
+2023-03-09 10:00:01.867 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 18720 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 10:00:01.872 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 10:00:20.937 INFO  c.j.J.a.ItemServiceImplTest - Started ItemServiceImplTest in 21.19 seconds (JVM running for 25.405)
+2023-03-09 10:09:44.696 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 4652 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 10:09:44.701 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 10:10:06.969 INFO  c.j.J.a.ItemServiceImplTest - Started ItemServiceImplTest in 23.973 seconds (JVM running for 28.369)
+2023-03-09 10:11:14.000 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 19944 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 10:11:14.009 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 10:11:36.984 INFO  c.j.J.a.ItemServiceImplTest - Started ItemServiceImplTest in 25.118 seconds (JVM running for 31.084)
+2023-03-09 10:16:09.574 INFO  c.j.J.a.ItemServiceImplTest - Starting ItemServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 2556 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 10:16:09.581 INFO  c.j.J.a.ItemServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 10:16:29.904 INFO  c.j.J.a.ItemServiceImplTest - Started ItemServiceImplTest in 22.171 seconds (JVM running for 26.212)
+2023-03-09 11:00:30.161 INFO  c.j.J.a.JobServiceImplTest - Starting JobServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 10200 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 11:00:30.166 INFO  c.j.J.a.JobServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 11:00:50.908 INFO  c.j.J.a.JobServiceImplTest - Started JobServiceImplTest in 22.558 seconds (JVM running for 26.71)
+2023-03-09 11:00:51.737 INFO  c.j.J.a.service.JobServiceImpl - a new job application was saved
+2023-03-09 11:00:52.197 INFO  c.j.J.a.service.JobServiceImpl - a new job application was saved
+2023-03-09 11:00:52.274 INFO  c.j.J.a.service.JobServiceImpl - a new job application was saved
+2023-03-09 11:22:18.038 INFO  c.j.J.a.UploadServiceImplTest - Starting UploadServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 3708 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 11:22:18.043 INFO  c.j.J.a.UploadServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 11:22:36.828 INFO  c.j.J.a.UploadServiceImplTest - Started UploadServiceImplTest in 20.441 seconds (JVM running for 25.143)
+2023-03-09 11:35:11.869 INFO  c.j.J.s.RoleServiceImplTest - Starting RoleServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 15488 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 11:35:11.873 INFO  c.j.J.s.RoleServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 11:35:32.006 INFO  c.j.J.s.RoleServiceImplTest - Started RoleServiceImplTest in 22.261 seconds (JVM running for 26.876)
+2023-03-09 11:54:11.384 INFO  c.j.J.s.UserServiceImplTest - Starting UserServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 5168 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 11:54:11.389 INFO  c.j.J.s.UserServiceImplTest - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 11:54:35.349 INFO  c.j.J.s.UserServiceImplTest - Started UserServiceImplTest in 26.281 seconds (JVM running for 30.543)

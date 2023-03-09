@@ -116,7 +116,6 @@ public class ItemServiceImpl implements ItemService{
         log.info("an item was updated with id: " + item.getId());
     }
 
-    @Transactional
     @Override
     public void delete(Item item) {
         itemRepository.delete(item);

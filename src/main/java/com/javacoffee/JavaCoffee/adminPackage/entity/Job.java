@@ -21,4 +21,10 @@ public class Job {
 
     @Column(name="uploadedFileName")
     private String uploadedFile;
+
+    public Job(String fullName, String uploadedFileName){
+        this.FullName = fullName;
+        this.uploadedFile = uploadedFileName;
+    }
+
 }

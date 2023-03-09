@@ -43,7 +43,7 @@ public class User {
                 inverseJoinColumns = @JoinColumn(name="role_id"))
     private Collection<Role> roles;
 
-    //Constructor for everything without Id and Shoppingcart
+    //Constructor for everything without Id
     public User(String userName, String firstName, String lastName,
                 String email, String phoneNumber,  String zip, String password){
         this.userName = userName;
@@ -55,7 +55,12 @@ public class User {
         this.zip = zip;
     }
 
-    //TODO: FOR SHOPPING CART
-    //@OneToOne(cascade=CascadeType.ALL, mappedBy="user")
-    //private ShoppingCart shoppingCart;
+    //constructor used for testing purposes
+    public User(String userName, String email, String password){
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
+
+
 }

@@ -28,6 +28,8 @@ public class Item {
 
     private double ourPrice;
 
+    //TODO: this line needs to be changed to not set a value
+    //TODO: then you have to test the application without it
     private boolean active = true;
 
     /*when this entity is persisted to the database,
@@ -45,14 +47,10 @@ public class Item {
     @Transient
     private MultipartFile itemImage;
 
-    //TODO: For ShoppingCart
-    //Connect it to ItemToCartItem
-    //@OneToMany(mappedBy = "item")
-    //@JsonIgnore
-    //private List<ItemToCartItem> itemToCartItemList;
+    //special constructor used for testing purposes
+    public Item(String name){
+        this.name = name;
+    }
 
-    //For Shopping Cart
-    //@Transient
-    //private int quantityToAdd;
 
 }

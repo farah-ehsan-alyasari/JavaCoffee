@@ -61,7 +61,7 @@ public class UploadServiceImpl implements UploadService {
         }
     }
 
-    private static boolean isFilePDF(String fileName) {
+    public static boolean isFilePDF(String fileName) {
         return fileName != null && fileName.endsWith(FILE_EXTENSION);
     }
 
