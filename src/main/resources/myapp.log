@@ -69,3 +69,25 @@
 2023-03-09 11:54:11.384 INFO  c.j.J.s.UserServiceImplTest - Starting UserServiceImplTest using Java 17.0.6 on LAPTOP-UITGDS1O with PID 5168 (started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
 2023-03-09 11:54:11.389 INFO  c.j.J.s.UserServiceImplTest - No active profile set, falling back to 1 default profile: "default"
 2023-03-09 11:54:35.349 INFO  c.j.J.s.UserServiceImplTest - Started UserServiceImplTest in 26.281 seconds (JVM running for 30.543)
+2023-03-09 11:59:19.989 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 18460 (C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\JavaCoffee\JavaCoffee)
+2023-03-09 11:59:19.994 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 11:59:51.758 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 35.22 seconds (JVM running for 38.651)
+2023-03-09 12:32:48.685 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 19440 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-09 12:32:48.695 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-09 12:33:08.713 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 22.217 seconds (JVM running for 24.998)
+2023-03-09 12:33:16.743 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 12:33:18.897 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:03:01.220 INFO  c.j.J.a.service.ItemServiceImpl - an item was updated with id: 32
+2023-03-09 13:04:21.153 INFO  c.j.J.a.service.ItemServiceImpl - new item was created
+2023-03-09 13:04:45.851 INFO  c.j.J.a.service.ItemServiceImpl - new item was created
+2023-03-09 13:05:56.308 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:05:56.407 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:06:33.215 INFO  c.j.J.a.service.JobServiceImpl - a new job application was saved
+2023-03-09 13:09:03.776 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:09:03.880 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:09:05.506 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:09:37.673 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:09:41.433 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:09:41.545 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:10:34.073 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-09 13:10:34.157 INFO  c.j.J.s.controller.UserController - Login page displayed
