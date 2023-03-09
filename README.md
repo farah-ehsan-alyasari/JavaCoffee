@@ -21,3 +21,4 @@ Improvements Goal Before March 15, 2023
   - Create view and update cart functionalities
 
 
+Note: if you run into an error that said failed to build gradle project, just go to the pom.xml file and left click > maven > load maven project
