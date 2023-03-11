@@ -12,6 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.convention.MatchingStrategies;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -97,6 +98,17 @@ public class UserServiceImpl implements UserService {
     public User findUserByName(String name)
     {
         return userRepository.findUserByUserName(name);
+    }
+
+    @Override
+    public User getCurrentlyLoggedInUser(UserPrincipal userPrincipal) {
+        if (userPrincipal != null) {
+            String email = userPrincipal.getUsername();
+            return userRepository.findUserByEmail(email);
+        } else {
+            log.info("no authenticated user was found");
+            return null;
+        }
     }
 }
 

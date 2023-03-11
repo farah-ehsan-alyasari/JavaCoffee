@@ -45,10 +45,10 @@ public class StoreFrontController {
         return "item-details";
     }
 
-    @RequestMapping("/shopping-cart")
+    /*@RequestMapping("/shopping-cart")
     public String showShoppingCart(){
         return "shopping-cart";
-    }
+    }*/
 
 
 

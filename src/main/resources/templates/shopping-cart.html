@@ -14,6 +14,9 @@
     <div class="row">
         <div class="col-md-8">
             <h2>Shopping Cart</h2>
+            <div th:if="${#lists.isEmpty(cartItems)}">
+                <h4>You have not added any products to your shopping cart yet!</h4>
+            </div>
             <hr>
             <table class="table">
                 <thead>
@@ -21,26 +24,19 @@
                     <th scope="col">Product</th>
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
+                    <th scope="col">Price*Quantity</th>
                     <th scope="col"></th>
                 </tr>
                 </thead>
                 <tbody>
                 <!-- Table rows for each product in the cart -->
-                <tr>
-                    <td>Product A</td>
-                    <td>$10.00</td>
-                    <td><input type="number" value="1" min="1"></td>
-                    <td>$10.00</td>
-                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
-                </tr>
-                <tr>
-                    <td>Product B</td>
-                    <td>$20.00</td>
-                    <td><input type="number" value="2" min="1"></td>
-                    <td>$40.00</td>
-                    <td><button class="btn btn-danger btn-sm">Remove</button></td>
-                </tr>
+               <tr th:each="cartItem: ${cartItems}">
+                   <td th:text="${cartItem.item.name}"></td>
+                   <td th:text="${cartItem.item.ourPrice}"></td>
+                   <td><input type="number" class="form-control" th:value="${cartItem.quantity}" min="1"></td>
+                   <td th:text="${cartItem.item.ourPrice * cartItem.quantity}"></td>
+                   <td><button class="btn btn-danger btn-sm">Remove</button></td>
+               </tr>
                 <!-- Add more table rows for each product in the cart -->
                 </tbody>
             </table>
@@ -48,9 +44,11 @@
         <div class="col-md-4">
             <h2>Order Summary</h2>
             <hr>
-            <p>Subtotal: $50.00</p>
+            <p>Subtotal: <span th:text="${subtotal}"></span>
+            </p>
             <p>Shipping: $5.00</p>
-            <p>Total: $55.00</p>
+            <p>Total: <span th:text="${total}"></span>
+            </p>
             <button class="btn btn-primary btn-lg btn-block">Checkout</button>
         </div>
     </div>
@@ -59,5 +57,24 @@
 <!-- Footer -->
 <div th:replace="/common/components :: common-footer" >
 </div>
+
+<script>
+    // Calculate subtotal
+    /*This JavaScript code is used to calculate the subtotal of items in a shopping cart.
+    First, it initializes the subtotal variable to 0. Then, it retrieves an array of cart items from the server-side code, using a Thymeleaf expression [[${cartItems}]].
+    Next, it loops through each item in the cartItems array using a for loop, and adds the result of multiplying the item's price (ourPrice) by the quantity of that item to the subtotal variable.
+    At the end of the loop, the subtotal variable should contain the sum of all the item subtotals.
+    */
+    var subtotal = 0;
+    var cartItems = /*[[${cartItems}]]*/ [];
+    for (var i = 0; i < cartItems.length; i++) {
+        subtotal += cartItems[i].item.ourPrice * cartItems[i].quantity;
+    }
+
+    // Calculate total
+    var total = subtotal+5;
+</script>
+
 </body>
 </html>
+

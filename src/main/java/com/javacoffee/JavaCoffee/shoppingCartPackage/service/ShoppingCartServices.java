@@ -1,0 +1,51 @@
+package com.javacoffee.JavaCoffee.shoppingCartPackage.service;
+
+import com.javacoffee.JavaCoffee.adminPackage.entity.Item;
+import com.javacoffee.JavaCoffee.adminPackage.repository.ItemRepository;
+import com.javacoffee.JavaCoffee.securityPackage.entity.User;
+import com.javacoffee.JavaCoffee.shoppingCartPackage.entity.CartItem;
+import com.javacoffee.JavaCoffee.shoppingCartPackage.repository.CartItemsRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class ShoppingCartServices {
+
+    @Autowired
+    private CartItemsRepository cartRepo;
+
+    @Autowired
+    private ItemRepository itemRepo;
+
+    public List<CartItem> listCartItems(User user){
+        return cartRepo.findByUser(user);
+    }
+
+    //returns the quantity of products that have been added to the shopping cart
+    public Integer addItem(Long itemId, Integer quantity, User user){
+        Integer addedQuantity = quantity;
+
+        Item item = itemRepo.findById(itemId).get();
+
+       CartItem cartItem = cartRepo.findByUserAndItem(user, item);
+
+       //the product has been added to Shopping cart for this customer, update quantity
+       if(cartItem != null){
+           addedQuantity = cartItem.getQuantity() + quantity;
+           cartItem.setQuantity(addedQuantity);
+       }
+       else{
+           //the product has not been added to the shopping cart of this customer
+           cartItem = new CartItem();
+           cartItem.setQuantity(quantity);
+           cartItem.setUser(user);
+           cartItem.setItem(item);
+       }
+
+       cartRepo.save(cartItem);
+
+        return addedQuantity;
+    }
+}
