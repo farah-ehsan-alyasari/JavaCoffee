@@ -35,6 +35,10 @@ public class ShoppingCartServices {
        if(cartItem != null){
            addedQuantity = cartItem.getQuantity() + quantity;
            cartItem.setQuantity(addedQuantity);
+
+           //update inStockNumber
+           Integer currentInStockNumber = cartItem.getItem().getInStockNumber();
+           cartItem.getItem().setInStockNumber( currentInStockNumber - quantity);
        }
        else{
            //the product has not been added to the shopping cart of this customer
@@ -42,6 +46,11 @@ public class ShoppingCartServices {
            cartItem.setQuantity(quantity);
            cartItem.setUser(user);
            cartItem.setItem(item);
+
+           //update inStockNumber
+           Integer currentInStockNumber = cartItem.getItem().getInStockNumber();
+           cartItem.getItem().setInStockNumber(currentInStockNumber - quantity);
+
        }
 
        cartRepo.save(cartItem);

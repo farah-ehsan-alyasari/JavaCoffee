@@ -53,6 +53,7 @@
                                         </div>
                                     </div>-->
                                 </div>
+                                <input id="inStockNumber" hidden="hidden" name="inStockNumber" th:field="*{item.inStockNumber}" placeholder="inStockNumber"/>
                                 <h4 th:if="*{item.inStockNumber&gt;10}" style="color:green;">In Stock</h4>
                                 <h4 th:if="*{item.inStockNumber&lt;10}" style="color:green;">Only <span th:text="${item.inStockNumber}"></span> In Stock</h4>
                                 <h4 th:if="*{item.inStockNumber==0}" style="color:red">Unavailable</h4>

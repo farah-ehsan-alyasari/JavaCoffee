@@ -1,5 +1,7 @@
 package com.javacoffee.JavaCoffee.shoppingCartPackage.controller;
 
+import com.javacoffee.JavaCoffee.adminPackage.entity.Item;
+import com.javacoffee.JavaCoffee.adminPackage.service.ItemService;
 import com.javacoffee.JavaCoffee.securityPackage.entity.User;
 import com.javacoffee.JavaCoffee.securityPackage.security.UserPrincipal;
 import com.javacoffee.JavaCoffee.securityPackage.service.UserService;
@@ -20,6 +22,9 @@ public class ShoppingCartRestController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private ItemService itemService;
+
     //TODO:Connect this method to the add item to cart button
     //add product to shopping cart
     @PostMapping("/add-to-cart/{itemId}/{qty}")
@@ -30,12 +35,20 @@ public class ShoppingCartRestController {
             return "You must login to add this product to your shopping cart";
         }
 
+
         User user = userService.getCurrentlyLoggedInUser(userPrincipal);
 
-        Integer addedQuantity = cartService.addItem(itemId, quantity, user);
-        System.out.println("YES:: :)");
+        //do not add item to cart if inStockNumber on edge case
+        Integer currentInStockNumber = itemService.findOne(itemId).getInStockNumber();
+        if(currentInStockNumber - quantity < 0){
+            return "sorry, not enough items in stock";
+        }
 
-        return addedQuantity+ "item(s) of this product were added to your shopping cart";
+        Integer addedQuantity = cartService.addItem(itemId, quantity, user);
+
+        //return addedQuantity+ " item(s) of this product were added to your shopping cart";
+
+        return quantity+ " item(s) of this product were added to your shopping cart";
 
     }
 }
