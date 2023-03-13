@@ -30,4 +30,9 @@ public class CartItem {
     private User user;
 
     private Integer quantity;
+
+    /*@Transient
+    public double getSubtotal(){
+        return this.item.getOurPrice() * quantity;
+    }*/
 }

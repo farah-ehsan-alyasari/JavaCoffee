@@ -51,4 +51,30 @@ public class ShoppingCartRestController {
         return quantity+ " item(s) of this product were added to your shopping cart";
 
     }
+
+   /* @PostMapping("/update-cart/{itemId}/{qty}")
+    public String updateQuantity(@PathVariable("itemId") Long itemId, @PathVariable("qty") Integer quantity, @AuthenticationPrincipal UserPrincipal userPrincipal){
+
+        //if(userPrincipal==null || userPrincipal instanceof AnonymousAuthenticationToken){
+        if(userPrincipal==null ){
+            return "You must login to add this product to your shopping cart";
+        }
+
+
+        User user = userService.getCurrentlyLoggedInUser(userPrincipal);
+
+        //do not add item to cart if inStockNumber on edge case
+        Integer currentInStockNumber = itemService.findOne(itemId).getInStockNumber();
+        if(currentInStockNumber - quantity < 0){
+            return "sorry, not enough items in stock";
+        }
+
+       cartService.updateQuantity(itemId, quantity, user);
+
+        //return addedQuantity+ " item(s) of this product were added to your shopping cart";
+
+        return "item has been updated";
+
+    }*/
+
 }

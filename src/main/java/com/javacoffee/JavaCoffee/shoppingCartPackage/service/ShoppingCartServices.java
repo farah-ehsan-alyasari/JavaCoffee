@@ -57,4 +57,22 @@ public class ShoppingCartServices {
 
         return addedQuantity;
     }
+
+
+   /* public void updateQuantity(Long itemId, Integer quantity, User user){
+        cartRepo.updateQuantity(quantity, itemId, user.getId());
+
+        //update inStockNumber
+        Item item = itemRepo.findById(itemId).get();
+        Integer currentQuantity = cartRepo.findByUserAndItem(user, item).getQuantity();
+        Integer currInStockNumber = item.getInStockNumber();
+        if(quantity < currentQuantity){
+            Integer change = currentQuantity - quantity;
+            item.setInStockNumber(currInStockNumber-change);
+        }
+        if(quantity > currentQuantity){
+            Integer change = quantity - currentQuantity;
+            item.setInStockNumber((currInStockNumber+change));
+        }
+    }*/
 }
