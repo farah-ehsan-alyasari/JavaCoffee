@@ -30,7 +30,7 @@
                 </thead>
                 <tbody>
                 <!-- Table rows for each product in the cart -->
-               <tr th:each="cartItem: ${cartItems}" data-itemid="${cartItem.item.id}">
+               <tr th:each="cartItem: ${cartItems}" th:data-itemid="${cartItem.item.id}">
                    <td th:text="${cartItem.item.name}"></td>
                    <td th:text="${cartItem.item.ourPrice}"></td>
                    <td><input type="number" class="form-control" th:value="${cartItem.quantity}" min="1" onchange="updateSubtotal(this)"></td>

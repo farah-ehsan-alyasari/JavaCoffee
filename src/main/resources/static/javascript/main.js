@@ -54,22 +54,19 @@ function updateTotal(){
 
 
 //preserve the updated item in shopping cart to database
-/*$(document).ready(function() {
-  // Add event listener for quantity input field
-  $('input[type="number"]').on('change', function() {
-    var itemId = $(this).closest('tr').data('itemid'); // Get the item id from data attribute
-    var quantity = $(this).val(); // Get the updated quantity
-    // Send AJAX request to updateQuantity controller
-    $.ajax({
-      url: '/update-cart/' + itemId + '/' + quantity,
-      type: 'POST',
-    success: function() {
-      console.log('Item quantity updated successfully!');
-    },
-      error: function(xhr, status, error) {
-        // Handle error response
-        console.log(xhr.responseText);
-      }
-    });
-  });
-});*/
+ $(document).ready(function() {
+     $('table').on('change', 'input[type="number"]', function() {
+         var itemId = $(this).closest('tr').data('itemid');
+         var qty = $(this).val();
+         $.ajax({
+             url: '/update-cart/' + itemId + '/' + qty,
+             type: 'POST',
+             success: function(result) {
+                 alert(result);
+             },
+             error: function(xhr, status, error) {
+                 alert(xhr.responseText);
+             }
+         });
+     });
+ });

@@ -8,6 +8,7 @@ import com.javacoffee.JavaCoffee.shoppingCartPackage.repository.CartItemsReposit
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -59,7 +60,8 @@ public class ShoppingCartServices {
     }
 
 
-   /* public void updateQuantity(Long itemId, Integer quantity, User user){
+    @Transactional
+    public void updateQuantity(Long itemId, Integer quantity, User user){
         cartRepo.updateQuantity(quantity, itemId, user.getId());
 
         //update inStockNumber
@@ -74,5 +76,5 @@ public class ShoppingCartServices {
             Integer change = quantity - currentQuantity;
             item.setInStockNumber((currInStockNumber+change));
         }
-    }*/
+    }
 }

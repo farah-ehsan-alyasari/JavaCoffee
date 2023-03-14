@@ -7,11 +7,15 @@ import com.javacoffee.JavaCoffee.securityPackage.security.UserPrincipal;
 import com.javacoffee.JavaCoffee.securityPackage.service.UserService;
 import com.javacoffee.JavaCoffee.shoppingCartPackage.service.ShoppingCartServices;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.transaction.Transactional;
 
 @RestController
 public class ShoppingCartRestController {
@@ -76,5 +80,28 @@ public class ShoppingCartRestController {
         return "item has been updated";
 
     }*/
+
+    @Transactional
+    @PostMapping("/update-cart/{itemId}/{qty}")
+    public ResponseEntity<String> updateQuantity(@PathVariable("itemId") Long itemId, @PathVariable("qty") Integer quantity, @AuthenticationPrincipal UserPrincipal userPrincipal){
+
+        //if(userPrincipal==null || userPrincipal instanceof AnonymousAuthenticationToken){
+        if(userPrincipal==null ){
+            return new ResponseEntity<>("You must login to add this product to your shopping cart", HttpStatus.UNAUTHORIZED);
+        }
+
+        User user = userService.getCurrentlyLoggedInUser(userPrincipal);
+
+        //do not add item to cart if inStockNumber on edge case
+        Integer currentInStockNumber = itemService.findOne(itemId).getInStockNumber();
+        if(currentInStockNumber - quantity < 0){
+            return new ResponseEntity<>("sorry, not enough items in stock", HttpStatus.BAD_REQUEST);
+        }
+
+        cartService.updateQuantity(itemId, quantity, user);
+
+        return new ResponseEntity<>("item has been updated", HttpStatus.OK);
+    }
+
 
 }
