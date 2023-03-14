@@ -70,3 +70,21 @@ function updateTotal(){
          });
      });
  });
+
+//remove item from db upon remove button click
+$(document).on('click', '.remove-link', function(e) {
+    e.preventDefault();
+    var itemId = $(this).data('itemid');
+    $.ajax({
+        type: 'POST',
+        url: '/remove-cartItem/' + itemId,
+        success: function(data) {
+            // Refresh the page or update the cart display
+            location.reload();
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            // Handle the error
+            console.log('Error: ' + errorThrown);
+        }
+    });
+});

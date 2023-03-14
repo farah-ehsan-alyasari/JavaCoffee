@@ -80,3 +80,42 @@
 2023-03-14 09:20:40.385 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 20.456 seconds (JVM running for 22.553)
 2023-03-14 09:20:46.893 INFO  c.j.J.s.controller.UserController - Login page displayed
 2023-03-14 09:20:48.255 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:24:28.815 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 6836 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 09:24:28.820 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 09:24:46.879 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 19.789 seconds (JVM running for 21.995)
+2023-03-14 09:24:53.667 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:24:55.157 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:48:42.272 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 8300 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 09:48:42.275 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 09:48:59.773 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 19.391 seconds (JVM running for 21.658)
+2023-03-14 09:49:34.907 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:49:35.844 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:55:37.641 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 3028 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 09:55:37.645 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 09:56:04.915 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 21568 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 09:56:04.918 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 09:56:26.004 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 22.933 seconds (JVM running for 25.348)
+2023-03-14 09:56:48.486 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:56:49.964 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:56:56.276 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:56:56.437 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:58:09.403 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 26444 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 09:58:09.406 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 09:58:29.396 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 21.878 seconds (JVM running for 24.115)
+2023-03-14 09:58:30.241 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 09:58:31.545 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 10:07:42.817 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 14204 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 10:07:42.823 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 10:08:04.302 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 23.809 seconds (JVM running for 26.503)
+2023-03-14 10:10:59.207 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 10:11:00.963 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 10:11:45.713 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 15476 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 10:11:45.717 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 10:12:04.914 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 21.051 seconds (JVM running for 23.348)
+2023-03-14 10:18:12.466 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 10:18:14.128 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 10:19:11.998 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Starting JavaCoffeeApplication using Java 17.0.6 on LAPTOP-UITGDS1O with PID 18232 (C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee\target\classes started by farah_a3 in C:\Users\farah_a3\Downloads\Alyasari_Farah_JavaCoffee_CaseStudy\JavaCoffee)
+2023-03-14 10:19:12.004 INFO  c.j.JavaCoffee.JavaCoffeeApplication - No active profile set, falling back to 1 default profile: "default"
+2023-03-14 10:19:31.619 INFO  c.j.JavaCoffee.JavaCoffeeApplication - Started JavaCoffeeApplication in 21.964 seconds (JVM running for 24.323)
+2023-03-14 10:20:14.912 INFO  c.j.J.s.controller.UserController - Login page displayed
+2023-03-14 10:20:16.446 INFO  c.j.J.s.controller.UserController - Login page displayed

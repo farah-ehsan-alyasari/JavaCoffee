@@ -77,4 +77,9 @@ public class ShoppingCartServices {
             item.setInStockNumber((currInStockNumber+change));
         }
     }
+
+    @Transactional
+    public void removeItem(Long itemId, User user){
+        cartRepo.deleteByUserAndItem(user.getId(), itemId);
+    }
 }

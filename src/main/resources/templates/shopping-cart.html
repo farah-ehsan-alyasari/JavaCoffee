@@ -35,7 +35,7 @@
                    <td th:text="${cartItem.item.ourPrice}"></td>
                    <td><input type="number" class="form-control" th:value="${cartItem.quantity}" min="1" onchange="updateSubtotal(this)"></td>
                    <td class="itemSubtotal" th:text="${cartItem.item.ourPrice * cartItem.quantity}"></td>
-                   <td><button class="btn btn-danger btn-sm">Remove</button></td>
+                   <td><button class="remove-link btn btn-danger btn-sm" th:data-itemid="${cartItem.item.id}">Remove</button></td>
                </tr>
                 <!-- Add more table rows for each product in the cart -->
                 </tbody>

@@ -104,4 +104,22 @@ public class ShoppingCartRestController {
     }
 
 
+    @Transactional
+    @PostMapping("/remove-cartItem/{itemId}")
+    public String removeItemFromCart(@PathVariable("itemId") Long itemId,
+                                     @AuthenticationPrincipal UserPrincipal userPrincipal){
+        if(userPrincipal == null){
+            return "you must login to remove item";
+        }
+
+        User user = userService.getCurrentlyLoggedInUser(userPrincipal);
+
+        if(user == null){
+            return "you must login to remove item";
+        }
+
+        cartService.removeItem(itemId, user);
+
+        return "item removed";
+    }
 }
