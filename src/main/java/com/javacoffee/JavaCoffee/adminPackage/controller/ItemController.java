@@ -70,6 +70,10 @@ public class ItemController {
 
     @RequestMapping("/delete-item")
     public String deleteItem(@RequestParam("id") Long id){
+
+        //TODO: DELETE THE ITEM FROM THE USER'S SHOPPING CART FIRST, TO PREVENT AN ERROR
+
+
         Item item = itemDetailService.findOne(id);
         itemDetailService.delete(item);
 
